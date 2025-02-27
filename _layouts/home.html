@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<section id="introduction">
+    <h2>Über mich</h2>
+    <p>
+        Hallo! Ich bin [Dein Name], ein [Dein Beruf] mit einer Leidenschaft für
+        [Dein Interessengebiet].
+    </p>
+</section>
+<section id="portfolio">
+    <h2>Meine Projekte</h2>
+    <div class="project-grid">
+        {% for post in site.posts %}
+        <div class="project-item">
+            <a href="{{ post.url }}">
+                <img src="{{ post.image }}" alt="{{ post.title }}" />
+                <h3>{{ post.title }}</h3>
+            </a>
+            <p>{{ post.excerpt }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</section>
